@@ -1,0 +1,191 @@
+.vibur-regular {
+    font-family: "Vibur", cursive; /* Define a fonte "Vibur" com estilo cursivo */
+    font-weight: 400; /* Define o peso da fonte como normal (400) */
+    font-style: normal; /* Define o estilo da fonte como normal */
+}
+
+*{
+    margin: 0; /* Remove todas as margens padrão */
+    padding: 0; /* Remove todos os preenchimentos padrão */
+    box-sizing: border-box; /* Define o box-sizing para incluir bordas e preenchimentos no tamanho total */
+    font-family:  "Vibur", cursive; /* Define a fonte "Vibur" como padrão para todos os elementos */
+}
+
+body{
+    display: flex; /* Define o corpo como um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    width: 100%; /* Define a largura como 100% da janela de visualização */
+    height: 100vh; /* Define a altura como 100% da altura da janela de visualização */
+    background-color: rgb(36, 35, 35); /* Define a cor de fundo como um tom escuro */
+}
+
+.inf{
+    padding: 15%;
+    padding-bottom: 40px;
+    text-align: center;
+    color: aqua;
+}
+
+.content{
+    padding: 0px;
+}
+
+h1{
+    color: rgb(126, 9, 9);
+    text-shadow: 1px 2px 2px #f8c8f8; /* Adiciona uma sombra ao texto */
+    /*text-align: center; /* Centraliza o texto */
+    font-size: 36px; /* Define o tamanho da fonte como 36px */
+    padding-left: 10px;
+}
+
+h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(25, 231, 238);
+    text-shadow: 3px 4px 2px #110111; /* Adiciona uma sombra ao texto */
+}
+
+p{
+    color: rgb(183, 213, 221);
+    font-size: 15px;
+    text-shadow: 1px 2px 2px #110111; /* Adiciona uma sombra ao texto */
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    padding: 45px;
+}
+
+.container{
+    display: flex; /* Define o contêiner como flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.book{
+    position: relative; /* Define a posição como relativa */
+    width: 260px; /* Define a largura como 260px */
+    height: 250px; /* Define a altura como 350px */
+    border-radius: 10px; /* Define bordas arredondadas com raio de 10px */
+    background-color: #312e35; /* Define a cor de fundo */
+    background-image: url(imagens/Captura\ de\ tela\ 2024-12-20\ 182443.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    box-shadow: 1px 1px 12px #000; /* Adiciona uma sombra ao elemento */
+    transform: preserve-3d; /* Preserva a transformação 3D */
+    perspective: 2000px; /* Define a perspectiva 3D */
+    display: flex; /* Define o contêiner como flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    color: #ecd8d8; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.cover{
+    top: 0; /* Define a posição superior como 0 */
+    position: absolute; /* Define a posição como absoluta */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    height: 100%; /* Define a altura como 100% do contêiner pai */
+    background-image: url(imagens/tema\ natal\ sem\ pessoas.png); /* Define a imagem de fundo */
+    
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir o contêiner */
+    background-position: center; /* Centraliza a posição da imagem de fundo */
+    transform-origin: 0; /* Define a origem da transformação */
+    box-shadow: 1px 1px 12px #000; /* Adiciona uma sombra ao elemento */
+    display: flex; /* Define o contêiner como flexível */
+    flex-direction: column; /* Define a direção do layout flexível como coluna */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: space-around; /* Distribui o conteúdo com espaço ao redor */
+    transition: all 0.5s; /* Define uma transição suave para todas as propriedades */
+   
+}
+
+
+
+
+.book.click .cover, .book.open .cover{
+    
+    transform: rotateY(-80deg); /* Rotaciona o elemento em 80 graus no eixo Y */
+}
+
+
+
+
+/* Media Queries para responsividade */
+@media (max-width: 1940px) {
+    h1 {
+        font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
+    }
+    p{
+        font-size: 30px;
+    }
+
+    .book {
+        width: 500px; /* Ajusta a largura do livro em telas menores */
+        height: 700px; /* Ajusta a altura do livro em telas menores */
+       
+    }
+
+    .container{
+        margin-bottom: 50px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px; /* Reduz o tamanho da fonte em telas menores */
+    }
+    p{
+        font-size: 30px;
+    }
+
+    .book {
+        width: 500px; /* Ajusta a largura do livro em telas menores */
+        height: 700px; /* Ajusta a altura do livro em telas menores */
+       
+    }
+
+    .container{
+        margin-bottom: 50px;
+        
+    }
+}
+
+@media (max-width: 580px) {
+    h1 {
+        font-size: 28px; /* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    }
+
+    p, h3{
+        font-size: 22px;
+    }
+
+    .book {
+        width: 350px; /* Ajusta a largura do livro em telas muito pequenas */
+        height: 550px; /* Ajusta a altura do livro em telas muito pequenas */
+        
+    }
+
+    .container{
+        margin-bottom: 50px;
+    }
+}
+    @media (max-width: 399px) and (orientation: portrait) { 
+    h1 { font-size: 28px;/* Reduz ainda mais o tamanho da fonte em telas muito pequenas */
+    }
+    
+    
+    p, h3 {
+        font-size: 22px;
+    }
+    
+    .book {
+        width: 310px;
+        /* Ajusta a largura do livro em telas muito pequenas */
+        height: 310px;
+        /* Ajusta a altura do livro em telas muito pequenas */
+    }
+    
+    .container {
+        margin-bottom: 50px;
+    }
+    }
+    

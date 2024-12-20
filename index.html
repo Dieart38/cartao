@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
+</head>
+<body>
+<div>
+    <p class="inf">clique na imagem para abrir</p>
+    <div class="container">
+
+        <div class="book" id="bookElement">
+            <!--<a href="#" id="playLink">d</a>-->
+            <div class="cover" >
+
+            </div>
+            <div class="content">
+                <h1>Feliz Natal</h1>
+                <p>Desejamos a todos um feliz natal e um próspero ano novo. <br>
+                    Com muita saúde, paz e felicidades</p>
+                <h3>Diego & Katia</h3>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<audio id="myAudio"> 
+    <source src="audios/music1.mp3">
+    Seu navegador não suporta o elemento de áudio. 
+</audio> 
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const audio = document.getElementById('myAudio');
+        const bookElement = document.getElementById('bookElement');
+
+        document.addEventListener('click', () => {
+            bookElement.classList.toggle('open');
+            if (bookElement.classList.contains('open')) { audio.play().catch(error => { console.log('Erro na reprodução do áudio:', error);
+
+             }); } else {
+                audio.pause(); audio.currentTime = 0; // Reinicia o áudio 
+            }
+        });
+    });
+</script>
+   
+</body>
+</html>
