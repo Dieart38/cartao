@@ -20,7 +20,7 @@ body{
 }
 
 .inf{
-    padding: 15%;
+    padding: 20px;
     padding-bottom: 40px;
     text-align: center;
     color: aqua;
@@ -62,12 +62,12 @@ p{
     position: relative; /* Define a posição como relativa */
     width: 260px; /* Define a largura como 260px */
     height: 250px; /* Define a altura como 350px */
-    border-radius: 10px; /* Define bordas arredondadas com raio de 10px */
+    border-radius: 20px; /* Define bordas arredondadas com raio de 10px */
     background-color: #312e35; /* Define a cor de fundo */
     background-image: url(imagens/Captura\ de\ tela\ 2024-12-20\ 182443.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    margin: 20px;
     box-shadow: 1px 1px 12px #000; /* Adiciona uma sombra ao elemento */
     transform: preserve-3d; /* Preserva a transformação 3D */
     perspective: 2000px; /* Define a perspectiva 3D */
@@ -76,6 +76,7 @@ p{
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     color: #ecd8d8; /* Define a cor do texto */
     text-align: center; /* Centraliza o texto */
+    animation: changeShadowColor 1.5s infinite; /* Aplica a animação 'changeShadowColor' */
 }
 
 .cover{
@@ -84,7 +85,7 @@ p{
     width: 100%; /* Define a largura como 100% do contêiner pai */
     height: 100%; /* Define a altura como 100% do contêiner pai */
     background-image: url(imagens/tema\ natal\ sem\ pessoas.png); /* Define a imagem de fundo */
-    
+    border-radius: 20px;
     background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir o contêiner */
     background-position: center; /* Centraliza a posição da imagem de fundo */
     transform-origin: 0; /* Define a origem da transformação */
@@ -97,12 +98,21 @@ p{
    
 }
 
+@keyframes changeShadowColor {
+
+     0% { box-shadow: 5px 4px 42px rgb(245, 33, 33); } 
+    25% { box-shadow: 5px 4px 42px rgb(37, 110, 245); } 
+    50% { box-shadow: 5px 4px 42px rgb(17, 201, 94); } 
+    75% { box-shadow: 5px 4px 42px rgb(223, 41, 223); }
+    100% { box-shadow: 5px 4px 42px rgb(200, 97, 248); }
+ }
 
 
 
 .book.click .cover, .book.open .cover{
     
     transform: rotateY(-80deg); /* Rotaciona o elemento em 80 graus no eixo Y */
+    border-radius: 20px;
 }
 
 
@@ -166,6 +176,7 @@ p{
 
     .container{
         margin-bottom: 50px;
+        
     }
 }
     @media (max-width: 399px) and (orientation: portrait) { 
